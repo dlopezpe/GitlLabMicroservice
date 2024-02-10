@@ -36,7 +36,7 @@ spring:
       #type: trace
 github:
   api:
-    url: https://github.com/dlopezpe
-    token: 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
+    owner: dlopezpe
+    token: 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
 
 

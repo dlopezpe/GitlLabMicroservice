@@ -9,7 +9,6 @@ public class ErrorResource {
     private String error;
     private String exception;
     private String message;
-    private String parameters;
 
     public Integer getStatus() {
         return status;
@@ -42,9 +41,5 @@ public class ErrorResource {
     public void setMessage(String message) {
         this.message = message;
     }
-
-    public String getParameters() { return parameters;   }
-
-    public void setParameters(String parameters) {     this.parameters = parameters;  }
 }
 

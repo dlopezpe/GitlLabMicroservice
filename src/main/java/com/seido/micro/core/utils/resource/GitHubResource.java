@@ -1,6 +1,7 @@
 package com.seido.micro.core.utils.resource;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.seido.micro.core.utils.Utils;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,6 +16,8 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class GitHubResource implements Serializable {
 
+    @JsonProperty("owner")
+    private String owner;
     @JsonProperty("repositoryName")
     private String repositoryName;
     @JsonProperty("baseBranchName")
@@ -33,7 +36,9 @@ public class GitHubResource implements Serializable {
     @Override
     public String toString() {
         return "gitResource{" +
+                ", owner=" + owner + '\'' +
                 ", repositoryName=" + repositoryName + '\'' +
+                ", repositoryName with format owner/repo=" + Utils.getFormatRepo(owner,repositoryName) + '\'' +
                 ", baseBranchName=" + baseBranchName + '\'' +
                 ", branchName=" + branchName + '\'' +
                 ", tagName=" + tagName + '\'' +

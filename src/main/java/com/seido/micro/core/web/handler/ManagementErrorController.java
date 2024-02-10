@@ -30,7 +30,7 @@ public class ManagementErrorController {
         error.setStatus(HttpStatus.BAD_REQUEST.value());
         error.setError(HttpStatus.BAD_REQUEST.getReasonPhrase());
         error.setMessage(ex.getMessage());
-        error.setException(ex.getClass().getName());
+        error.setException(ex.getCause().getMessage());
         return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
     }
 }

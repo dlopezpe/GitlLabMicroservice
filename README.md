@@ -12,6 +12,10 @@ Datos:
 
 ### Instrucciones
 
+0. Crear token en el gitHub.com
+   ```bash
+   https://github.com/settings/tokens
+
 1. Construir la imagen de Docker:
 
    ```bash
@@ -26,3 +30,4 @@ Datos:
 
    ```bash
    http://localhost:8080/swagger-ui.html
+# preadfs
