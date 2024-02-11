@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  gitlab-service-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gitlab-service-api  # Cambia el nombre del contenedor
+    ports:
+      - "8080:8080"

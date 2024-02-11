@@ -36,7 +36,7 @@ spring:
       #type: trace
 github:
   api:
-    owner: dlopezpe
-    token: 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
+    owner:
+    token:
 
 
