@@ -31,13 +31,10 @@ spring:
   logging:
     level:
       ROOT: DEBUG
-      com.seido.micro.core: DEBUG
+      es.ineco.core: DEBUG
       org.hibernate: WARN
       #type: trace
-com:
-  seido:
-    micro:
-      core:github:
+github:
   api:
     owner:
     token:
