@@ -87,7 +87,7 @@ public class GitHubControler {
         LOG.info("INIT: Rest service createRepository");
         LOG.info("Validate fields");
 
-        // Is true validating all fields and false alone validated environment and scope
+        // Is true validating all fields and false alone validated
         GitHubResource gitResource =new GitHubResource(owner,repository,null,null,null,null,null );
         validateGitResource(gitResource, false);
 
@@ -141,7 +141,7 @@ public class GitHubControler {
         LOG.info("INIT: Rest service createBranch");
         LOG.info("Validate fields");
 
-        // Is true validating all fields and false alone validated environment and scope
+        // Is true validating all fields and false alone validated
         GitHubResource gitResource =new GitHubResource(owner,repository,null,branch,null,null,null);
         validateGitResource(gitResource, true);
         String repo = Utils.getFormatRepo(owner,repository);
@@ -190,7 +190,7 @@ public class GitHubControler {
         LOG.info("INIT: Rest service createBranch");
         LOG.info("Validate fields");
 
-        // Is true validating all fields and false alone validated environment and scope
+        // Is true validating all fields and false alone validated
         validateGitResource(gitHubResource, true);
 
         //Validate format tagname
@@ -272,7 +272,7 @@ public class GitHubControler {
 
 
     /**
-     * Validate all fields or alone environment and scope depends if create or find to query
+     * Validate all fields or alone depends if create or find to query
      *
      * @param nexec     Param execution resource
      * @param allFields if true is all validations fields or false alone ENV and SCOPE
