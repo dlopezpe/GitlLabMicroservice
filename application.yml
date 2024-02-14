@@ -14,10 +14,10 @@ logging:
 
 #Server port
 server:
-  port: 8080
-  servlet:
-  #Seteamos el contexto para llamarlo http://localhost:8080/seido/xxxx
-    context-path: /seido/
+    port: 8080
+    servlet:
+    #Seteamos el contexto para llamarlo http://localhost:8080/seido/xxxx
+      context-path: /seido/
 
 spring:
   application:
@@ -34,12 +34,10 @@ spring:
       com.seido.micro.core: DEBUG
       org.hibernate: WARN
       #type: trace
-com:
-  seido:
-    micro:
-      core:github:
+
+github:
   api:
-    owner:
-    token:
+    owner: dlopezpe
+    token: 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
 
 

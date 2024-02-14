@@ -1,42 +1,38 @@
-spring.jackson.serialization.INDENT_OUTPUT: true
-#LOGGING
-logging:
-  #Deshabilitaremos los logs, en caso de depurar descomentarlo
-  #file: "c:/script/logs/script.log"
-  level:
-    root: ERROR
-    org.springframework.web: DEBUG
-    dgip.sgcp.ipp.core: DEBUG
-    org.hibernate: DEBUG
-    org.hibernate.SQL: DEBUG
-    org.hibernate.type: DEBUG
-    org.hibernate.type.descriptor.sql: DEBUG
 
-#Server port
-server:
-  port: 8080
-  servlet:
-  #Seteamos el contexto para llamarlo http://localhost:8080/seido/xxxx
-    context-path: /seido/
+spring.jackson.serialization.INDENT_OUTPUT: true
 
 spring:
+
   application:
     name: gitLab-service-api
-  profiles:
-    #http://localhost:8080/seido/swagger-ui.html
-    active: swagger
-  cloud:
-    config:
-      enabled: true
-  logging:
-    level:
-      ROOT: DEBUG
-      es.ineco.core: DEBUG
-      org.hibernate: WARN
-      #type: trace
+  profiles: test
+  jpa:
+    hibernate:
+      ddl-auto: none
+      show_sql: true
+      dialect: org.hibernate.dialect.H2Dialect
+
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=TRUE
+    username: test
+    password: test
+
+    platform: h2
+    initialize: true
+
+###
+#   H2 Settings
+###
+h2:
+  console:
+    enabled: true
+    path: /console
+    settings:
+      trace: false
+      web-allow-others: false
+
 github:
   api:
-    owner:
-    token:
-
-
+    owner: dlopezpe
+    token: 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
