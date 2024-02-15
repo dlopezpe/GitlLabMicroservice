@@ -14,16 +14,16 @@ logging:
 
 #Server port
 server:
-    port: 8080
+    port: 8082
     servlet:
-    #Seteamos el contexto para llamarlo http://localhost:8080/seido/xxxx
+    #Seteamos el contexto para llamarlo http://localhost:8082/seido/xxxx
       context-path: /seido/
 
 spring:
   application:
     name: gitLab-service-api
   profiles:
-    #http://localhost:8080/seido/swagger-ui.html
+    #http://localhost:8082/seido/swagger-ui.html
     active: swagger
   cloud:
     config:
@@ -37,7 +37,7 @@ spring:
 
 github:
   api:
-    owner: dlopezpe
-    token: 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
+    owner:
+    token:
 
 
