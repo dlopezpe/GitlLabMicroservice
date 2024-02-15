@@ -57,6 +57,8 @@ Estando en la ruta del proyecto que nos hayamos descargado lanzamos este script 
     ```bash
       $ ./launch_local.sh
 
+Este script levanta teniendo el docker desktop que he utilizado levantado, las siguientes imagenes:
+   - El servicio gitlab-service-api expuesto al puerto 8082
 
 ### Cosas a tener en cuenta:
 

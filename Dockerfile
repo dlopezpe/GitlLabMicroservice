@@ -25,7 +25,7 @@ COPY --from=build /app/target/gitLab-service-api-0.0.1-SNAPSHOT.jar /app/gitLab-
 COPY application.yml /app/application.yml
 
 # Exponer el puerto en el que la aplicación se ejecutará
-EXPOSE 8080
+EXPOSE 8082
 
 # Nombre de la imagen y etiqueta
 LABEL image.name="gitlab_service_api" \
